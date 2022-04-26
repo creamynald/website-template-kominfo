@@ -1,32 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="/">Judul Web</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Kategori
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              @foreach ($kategori as $kat)
-                <li><a class="dropdown-item" href="{{ $kat->slug }}">{{ $kat->nama_kategori }}</a></li>
-              @endforeach
-              {{-- <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <!-- <h1 class="logo"><a href="index.html">Multi</a></h1> -->
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <a href="/" class="logo"><img src="/img/logo.png" alt="" class="img-fluid"></a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto" href="#">HOME</a></li>
+        <li><a class="nav-link scrollto" href="#">PROFIL</a></li>
+        <li><a class="nav-link scrollto" href="#">PUBLIKASI</a></li>
+        <li><a class="nav-link scrollto " href="#">POTENSI</a></li>
+        <li><a class="nav-link scrollto" href="#">STATISTIK</a></li>
+        <li class="dropdown"><a href="#"><span>KATEGORI</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            @foreach ($kategori as $row)
+              <li><a href="#">{{ $row->nama_kategori }}</a></li>
+            @endforeach
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="#">DOWNLOAD</a></li>
+        <li><a class="getstarted scrollto" href="#">KONTAK</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header>

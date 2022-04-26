@@ -18,6 +18,7 @@ class FrontendController extends Controller
             'kategori' => $kategori,
             'artikel' => $artikel,
             'slide' => $slide,
+            'title' => 'Website Template Laravel Kabupaten Bengkalis'
         ]);
     }
 

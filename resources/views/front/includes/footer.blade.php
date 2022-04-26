@@ -1,15 +1,59 @@
-<div class="footer p-2 mt-3 text-white" style="background-color: #282828">
-    <div class="container-fluid">
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          Footer Kiri
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Lorem Lorem</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+          </ul>
         </div>
-        <div class="col-md-4">
-          Footer Tengah
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Lorem Lorem</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+          </ul>
         </div>
-        <div class="col-md-4">
-          Footer Kanan
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Lorem Lorem</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+          </ul>
         </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Lorem Lorem</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lorem Lorem</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <div class="copyright">
+      Copyright &copy; 2022 Dinas Komunikasi Informatika dan Statistik Kabupaten Bengkalis. All Rights Reserved
+    </div>
+  </div>
+</footer>
