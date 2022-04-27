@@ -18,7 +18,6 @@
 
   <!-- Vendor CSS Files -->
   <link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="/vendor/aos/aos.css" rel="stylesheet">
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -29,28 +28,42 @@
   <!-- Template Main CSS File -->
   <link href="/css/style.css" rel="stylesheet">
 
+  {{-- font awesome --}}
+  <script src="https://kit.fontawesome.com/46909a6f92.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="title"><a href="#"><img width="18" src="{{ asset('/img/favicon-kominfotik.png') }}" alt=""></a> Selamat Datang Di {{ $title }}</i>
+      </div>
+      <div class="social-links d-none d-md-flex">
+        <span class="text-white">Ikuti Kami</span>
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </section>
+
   <!-- ======= Header ======= -->
   @include('front.includes.header')
-  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   @include('front.includes.slide')
-  <!-- End Hero -->
 
-  <div class="container">
+  <main id="main">
     @yield('content')
-  </div><!-- End #main -->
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   @include('front.includes.footer')
-  <!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   @include('front.includes.js')

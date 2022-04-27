@@ -1,6 +1,6 @@
 /**
-* Template Name: Multi - v4.7.0
-* Template URL: https://bootstrapmade.com/multi-responsive-bootstrap-template/
+* Template Name: MyBiz - v4.7.0
+* Template URL: https://bootstrapmade.com/mybiz-free-business-bootstrap-theme/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -67,10 +67,6 @@
     let header = select('#header')
     let offset = header.offsetHeight
 
-    if (!header.classList.contains('header-scrolled')) {
-      offset -= 16
-    }
-
     let elementPos = select(el).offsetTop
     window.scrollTo({
       top: elementPos - offset,
@@ -82,12 +78,19 @@
    * Toggle .header-scrolled class to #header when page is scrolled
    */
   let selectHeader = select('#header')
+  let selectTopbar = select('#topbar')
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
+        if (selectTopbar) {
+          selectTopbar.classList.add('topbar-scrolled')
+        }
       } else {
         selectHeader.classList.remove('header-scrolled')
+        if (selectTopbar) {
+          selectTopbar.classList.remove('topbar-scrolled')
+        }
       }
     }
     window.addEventListener('load', headerScrolled)
@@ -159,16 +162,6 @@
   });
 
   /**
-   * Preloader
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
-
-  /**
    * Hero carousel indicators
    */
   let heroCarouselIndicators = select("#hero-carousel-indicators")
@@ -178,35 +171,6 @@
     (index === 0) ?
     heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
       heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      }
-    }
   });
 
   /**
@@ -231,9 +195,6 @@
 
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
         });
       }, true);
     }
@@ -265,15 +226,21 @@
   });
 
   /**
-   * Animation on scroll
+   * Testimonials slider
    */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
+  new Swiper('.testimonials-slider', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
   });
 
 })()
