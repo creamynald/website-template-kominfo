@@ -15,6 +15,7 @@ class FrontendController extends Controller
         $artikel = Artikel::all();
         $slide = Slide::all();
         $bannerS = Banner::where('id', '1')->first();
+
         return view('front.home',[
             'kategori' => $kategori,
             'artikel' => $artikel,
@@ -37,7 +38,9 @@ class FrontendController extends Controller
             'artikel' => $artikel,
             'slide' => $slide,
             'bannerS' => $bannerS,
-            'postinganTerbaru' => $postinganTerbaru
+            'postinganTerbaru' => $postinganTerbaru,
+            'title' => 'Website Template Laravel Kabupaten Bengkalis'
         ]);
     }
+
 }

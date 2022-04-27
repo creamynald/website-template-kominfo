@@ -1,6 +1,8 @@
 @extends('front.layouts.frontend')
 
 @section('content')
+
+  @include('front.includes.slide')
 <!-- ======= sambutan kadis Section ======= -->
 <section id="team" class="team">
   <div class="container">
@@ -20,27 +22,72 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 mt-4 mt-lg-0">
-        <div class="member d-flex align-items-start">
-          <div class="pic"><img src="/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-          <div class="member-info">
-            <h4>Sarah Jhonson</h4>
-            <span>Product Manager</span>
-            <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-            <div class="social">
-              <a href=""><i class="ri-twitter-fill"></i></a>
-              <a href=""><i class="ri-facebook-fill"></i></a>
-              <a href=""><i class="ri-instagram-fill"></i></a>
-              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+        {{-- berita --}}
+        @foreach ($artikel as $row)
+        <div class="artikel mt-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="portfolio-wrap">
+                  <a href="{{ route('detail-artikel', $row->slug) }}"><img src="{{ asset('uploads/' . $row->gambar_artikel) }}" class="img-fluid" alt=""></a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <span><i class="fa-regular fa-clock text-danger"></i> {{ $row->created_at }}</span>
+                <h4><a href="{{ route('detail-artikel', $row->slug) }}"><b>{{ $row->judul }}</b></a></h4>
+                <p>{!!\Illuminate\Support\Str::limit($row->body, 200, '...')!!}</p>
+              </div>
             </div>
           </div>
         </div>
+        @endforeach
+        {{-- end berita --}}
       </div>
+      {{-- end left --}}
 
+      {{-- right --}}
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="member d-flex align-items-start">
+          <div class="member-info">
+            <h3><i class="fa-thin fa-hashtag"></i> Topik Populer</h3>
+            <div class="social">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="member d-flex align-items-start mt-2">
+          <div class="member-info">
+            <h3><i class="fa-thin fa-hashtag"></i> Profil Pegawai</h3>
+            <img src="{{ asset('uploads/'.$bannerS->gambar_banner) }}" alt="" style="width: 100%">
+          </div>
+        </div>
+        
+        <div class="member d-flex align-items-start mt-2">
+          <div class="member-info">
+            <h3><i class="fa-thin fa-hashtag"></i> Info Bengkalis</h3>
+            <div class="social">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+                <li class="list-group-item"><i class="fa-thin fa-hashtag text-warning"></i> Lorem ipsum dolor sit amet. Lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>         
+
+    {{-- end row --}}
     </div>
 
-  </div>
 </section><!-- End Team Section -->
 @endsection

@@ -56,7 +56,6 @@
   @include('front.includes.header')
 
   <!-- ======= Hero Section ======= -->
-  @include('front.includes.slide')
 
   <main id="main">
     @yield('content')

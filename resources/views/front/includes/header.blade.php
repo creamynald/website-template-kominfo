@@ -4,17 +4,17 @@
     <div class="logo">
       {{-- <h1><a href="index.html">Web<span>Template by creamynald</span></a></h1> --}}
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html"><img src="/img/logo.png" alt="" class="img-fluid"></a>
+      <a href="/"><img src="/img/logo.png" alt="" class="img-fluid"></a>
     </div>
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
-        <li><a class="nav-link scrollto" href="#about">PROFIL</a></li>
-        <li><a class="nav-link scrollto" href="#services">UNIT KERJA</a></li>
-        <li><a class="nav-link scrollto " href="#portfolio">PUBLIKASI</a></li>
-        <li><a class="nav-link scrollto" href="#team">INFORMASI PUBLIK</a></li>
-        <li><a class="nav-link scrollto" href="#team">AGENDA</a></li>
+        <li><a class="nav-link scrollto active" href="/">HOME</a></li>
+        <li><a class="nav-link scrollto" href="#">PROFIL</a></li>
+        <li><a class="nav-link scrollto" href="#">UNIT KERJA</a></li>
+        <li><a class="nav-link scrollto " href="#">PUBLIKASI</a></li>
+        <li><a class="nav-link scrollto" href="#">INFORMASI PUBLIK</a></li>
+        <li><a class="nav-link scrollto" href="#">AGENDA</a></li>
         <li class="dropdown"><a href="#"><span>KONTAK</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="#">Drop Down 1</a></li>
