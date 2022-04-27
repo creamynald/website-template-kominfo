@@ -1,5 +1,5 @@
 Fiture
-- Backend on /dashboard with Cardinality(creamynald@gmail.com/password)
+- Backend on /dashboard with Cardinality (creamynald@gmail.com/password)
 - Frontend
 
 
