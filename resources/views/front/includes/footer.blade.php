@@ -3,14 +3,63 @@
     <div class="container">
       <div class="row">
 
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Profil</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Sejarah</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Potensi Daerah</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lambang Daerah</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Peta Wilayah</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Sekilas Diskominfotik</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Visi dan Misi</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Sambutan Kepala Dinas</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Struktur Organisasi</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Profil Kepegawaian</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Profil Pegawai</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Publikasi</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Statistik Informasi</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Update Covid-19</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Pemerintah</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Pemuda dan Olahraga</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Ekonomi dan Pariwisata</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Opini</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Sosial Budaya</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Pemberdayaan Perempuan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Agama dan Pendidikan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Berita Warga</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Info Nasional</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Info RIau</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Galeri Kegiatan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Berita Foto</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Video Kegiatan</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Informasi Publik</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Info Renja</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Info Renstra</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Unduhan</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Agenda</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Pengumuman</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Peta Website</a></li>
+          </ul>
+        </div>
+
         <div class="col-lg-3 col-md-6">
           <div class="footer-info">
-            <h3>MyBiz</h3>
+            <h3>Kontak</h3>
             <p>
-              A108 Adam Street <br>
-              NY 535022, USA<br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Jl. Kartini No. 012 Kode Pos <br>
+              28712, Bengkalis, Riau.<br><br>
+              <strong>Email:</strong> diskominfotik@bengkaliskab.go.id<br>
+              <strong>Website:</strong> diskominfotik.bengkaliskab.go.id<br>
             </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -22,44 +71,21 @@
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-          </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <img src="https://diskominfotik.bengkaliskab.go.id/green2.png" alt="">
+          </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          <form action="" method="post">
-            <input type="email" name="email"><input type="submit" value="Subscribe">
-          </form>
-
-        </div>
-
       </div>
     </div>
+    
   </div>
 
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong><span>{{ $title }}</span></strong>. All Rights Reserved
+      Copyright &copy; 2022<strong><span> {{ $title }}</span></strong>. All Rights Reserved
     </div>
   </div>
 </footer><!-- End Footer -->

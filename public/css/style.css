@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #0dd3fe;
+  color: #ffc107;
   text-decoration: none;
 }
 
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #03d1fe;
+  background: #000;
   color: #fff;
 }
 .back-to-top.active {
@@ -844,6 +844,12 @@ section {
 .team .member .member-info {
   padding-left: 30px;
 }
+
+.team .member .member-infos {
+  padding-left: 50px;
+  padding: 30px;
+}
+
 .team .member h4 {
   font-weight: 700;
   margin-bottom: 5px;
@@ -1157,13 +1163,13 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #1f2627;
+  background: #0a1119;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
 }
 #footer .footer-top {
-  background: #2a3336;
+  background: #0d141b;
   border-bottom: 1px solid #354144;
   padding: 60px 0 30px 0;
 }
@@ -1239,7 +1245,7 @@ section {
   line-height: 1;
 }
 #footer .footer-top .footer-links ul a:hover {
-  color: #27d8fe;
+  color: #282828;
 }
 #footer .footer-top .footer-newsletter form {
   margin-top: 30px;
@@ -1268,7 +1274,7 @@ section {
   border-radius: 0 5px 5px 0;
 }
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #0187a4;
+  background: #282828;
 }
 #footer .copyright {
   text-align: center;

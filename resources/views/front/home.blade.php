@@ -24,7 +24,7 @@
         </div>
 
         {{-- berita --}}
-        @foreach ($artikel as $row)
+        @foreach ($post as $row)
         <div class="artikel mt-3">
           <div class="container">
             <div class="row">
