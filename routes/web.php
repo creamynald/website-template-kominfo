@@ -8,7 +8,9 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\SlideController;
+use App\Models\Sambutan;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -28,9 +30,10 @@ Route::get('/detail-artikel/{slug}', [FrontendController::class, 'detail'])->nam
 Auth::routes();
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
-Route::resource('kategori', KategoriController::class);
-Route::resource('artikel', ArtikelController::class);
-Route::resource('playlist', PlaylistController::class);
-Route::resource('materi', MateriController::class);
-Route::resource('slide', SlideController::class);
-Route::resource('banner', BannerController::class);
+Route::resource('/dashboard/kategori', KategoriController::class);
+Route::resource('/dashboard/artikel', ArtikelController::class);
+Route::resource('/dashboard/playlist', PlaylistController::class);
+Route::resource('/dashboard/materi', MateriController::class);
+Route::resource('/dashboard/slide', SlideController::class);
+Route::resource('/dashboard/banner', BannerController::class);
+Route::resource('/dashboard/sambutan', SambutanController::class);

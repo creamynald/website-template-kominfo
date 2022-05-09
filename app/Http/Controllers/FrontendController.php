@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Artikel;
 use App\Models\Banner;
 use App\Models\Kategori;
+use App\Models\Sambutan;
 use App\Models\Slide;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -16,6 +17,7 @@ class FrontendController extends Controller
         $artikel = Artikel::all();
         $slide = Slide::all();
         $bannerS = Banner::where('id', '1')->first();
+        $sambutan = Sambutan::all();
 
         return view('front.home',[
             'kategori' => $kategori,
@@ -23,7 +25,8 @@ class FrontendController extends Controller
             'slide' => $slide,
             'bannerS' => $bannerS,
             'title' => 'Website Template Laravel Kabupaten Bengkalis',
-            'post' => Artikel::latest()->paginate(5)->withQueryString()
+            'post' => Artikel::latest()->paginate(5)->withQueryString(),
+            'sambutan' => $sambutan
         ]);
     }
 
@@ -33,6 +36,7 @@ class FrontendController extends Controller
         $artikel = Artikel::where('slug', $slug)->first();
         $bannerS = Banner::where('id', '1')->first();
         $users = User::all();
+        $sambutan = Sambutan::all();
 
         $postinganTerbaru = Artikel::orderBy('created_at', 'DESC')->limit(5)->get();
 
@@ -43,7 +47,8 @@ class FrontendController extends Controller
             'bannerS' => $bannerS,
             'postinganTerbaru' => $postinganTerbaru,
             'title' => 'Website Template Laravel Kabupaten Bengkalis',
-            'users' => $users
+            'users' => $users,
+            'sambutan' => $sambutan
         ]);
     }
 

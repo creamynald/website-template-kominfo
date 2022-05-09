@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Artikel;
-use App\Models\Kategori;
 use App\Models\Sambutan;
-use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
-class DashboardController extends Controller
+class SambutanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,19 +16,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        $artikel = Artikel::all();
-        $kategori = Kategori::all();
         $sambutan = Sambutan::all();
-
-        return view ('back.dashboard', [
-            'title' => 'Website Template Laravel Kabupaten Bengkalis',
-            'users' => $users,
-            'artikel' => $artikel,
-            'kategori' => $kategori,
-            'sambutan' => $sambutan
-        ]);
-
+        return view('back.sambutan.index', compact('sambutan'));
     }
 
     /**
@@ -72,7 +60,8 @@ class DashboardController extends Controller
      */
     public function edit($id)
     {
-        //
+        $sambutan = Sambutan::find($id);
+        return view ('back.sambutan.edit', compact('sambutan'));
     }
 
     /**
@@ -84,7 +73,35 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if(empty($request->file('foto'))){
+            $sambutan = Sambutan::find($id);
+            $sambutan->update([
+                'judul' => $request->judul,
+                'body' => $request->body,
+                'body_full' => $request->body_full,
+                'slug'  => Str::slug($request->judul),
+                'nama' => $request->nama,
+                'jabatan' => $request->jabatan,
+            ]);
+            return redirect()->route('sambutan.index')->with(['success' => 'Data Berhasil Update']);
+            
+        }else{
+            $sambutan = Sambutan::find($id);
+            Storage::delete($sambutan->foto);
+            $sambutan->update([
+                'judul' => $request->judul,
+                'body' => $request->body,
+                'body_full' => $request->body_full,
+                'slug'  => Str::slug($request->judul),
+                'foto' => $request->foto,
+                'nama' => $request->nama,
+                'jabatan' => $request->jabatan,
+                'foto' => $request->file('foto')->store('foto'),
+
+            ]);
+
+            return redirect()->route('sambutan.index')->with(['success' => 'Data Berhasil Update']);
+        }
     }
 
     /**

@@ -8,20 +8,25 @@
   <div class="container">
     <div class="row">
 
+      @foreach ($sambutan as $row)
       <div class="col-lg-8">
         <div class="sambutan">
           <div class="member align-items-start">
-            <h3><b>Sambutan Kepala Dinas</b></h3>
-            <p>Pertama dan utama sekali, mari kita panjatkan puji syukur ke hadirat Allah SWT., Tuhan Yang Maha Kuasa, karena berkat cucuran rahmat dan nikmat-Nya, Dinas Komunikasi, Informatika dan Statistik, sebagai salah satu Perangkat Daerah di Pemerintah Kabupaten (Pemkab) Bengkalis, masih bisa dan terus berupaya untuk eksis dalam mendukung terwujudnya visi Kabupaten Bengkalis, yakni; <br><br> “Terwujudnya Kabupaten Bengkalis yang Bermarwah, Maju dan Sejahtera”, khususnya melalui transparansi dan keterbukaan informasi publik“</p>
+            <h3><b>{{ $row->judul }}</b></h3>
+            <p>{!! $row->body !!}</p>
             <div class="d-flex align-items-start mt-3">
-              <div class="minipic"><img src="{{ asset('img/kepaladinas.jpg') }}" class="img-fluid" alt=""></div>
+              <div class="minipic"><img src="{{ asset('uploads/' . $row->foto) }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Hendrik Dwi Yatmoko, S.Sos, MT</h4>
-                <span>Kepala Dinas</span>
+                <h4>{{ $row->nama }}</h4>
+                <span>{{ $row->jabatan }}</span>
               </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="#"><button class="btn btn-danger btn-sm" type="button"><i class="fa-solid fa-share"></i> Selengkapnya</button></a>
             </div>
           </div>
         </div>
+        @endforeach
 
         {{-- berita --}}
         @foreach ($post as $row)

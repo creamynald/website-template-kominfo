@@ -53,6 +53,11 @@
             <i class="bi bi-circle"></i><span>Banners</span>
           </a>
         </li>
+        <li>
+          <a href="{{ route('sambutan.index') }}">
+            <i class="bi bi-circle"></i><span>Sambutan</span>
+          </a>
+        </li>
       </ul>
     </li><!-- End Components Nav -->
 
