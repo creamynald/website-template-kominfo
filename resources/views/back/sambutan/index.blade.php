@@ -45,8 +45,8 @@
                     @forelse ($sambutan as $row)
                         <tr>
                             <td>{{ $row->judul }}</td>
-                            <td>{!! $row->body !!}</td>
-                            <td>{!! $row->body_full !!}</td>
+                            <td>{!!\Illuminate\Support\Str::limit($row->body, 300, '...')!!}</td>
+                            <td>{!!\Illuminate\Support\Str::limit($row->body_full, 300, '...')!!}</td>
                             <td>{{ $row->nama }}</td>
                             <td>{{ $row->jabatan }}</td>
                             <td><img src="{{ asset('uploads/' . $row->foto) }}" width="80" class="img-thumbnail"></td>

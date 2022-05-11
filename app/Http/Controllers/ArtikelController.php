@@ -6,6 +6,7 @@ use App\Models\Artikel;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -18,9 +19,10 @@ class ArtikelController extends Controller
      */
     public function index()
     {
+        
         $artikel = Artikel::all();
         return view('back.artikel.index', [
-            'artikel' => $artikel
+            'artikel' => $artikel,
         ]);
     }
 

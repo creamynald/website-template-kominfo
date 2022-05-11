@@ -114,4 +114,15 @@ class SambutanController extends Controller
     {
         //
     }
+
+    public function detailSambutan($slug){
+
+        $sambutan = Sambutan::all();
+
+        return view('front.sambutan.detail-sambutan', [
+            'title' => 'Website Template Laravel Kabupaten Bengkalis',
+            'sambutan' => $sambutan,
+        ]);
+
+    }
 }

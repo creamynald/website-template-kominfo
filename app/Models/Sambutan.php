@@ -13,6 +13,7 @@ class Sambutan extends Model
 
     protected $fillable = [
         'judul', 
+        'slug',
         'body', 
         'body_full', 
         'foto', 
@@ -21,4 +22,5 @@ class Sambutan extends Model
     ];
 
     protected $hidden = [];
+
 }

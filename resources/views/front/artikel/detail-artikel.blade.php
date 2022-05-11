@@ -4,13 +4,13 @@
 <section id="team" class="team mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 mt-3">
                 <div class="blog-post">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/" class="text-warning">Home</a></li>
                         <li class="breadcrumb-item active">{{ $artikel->kategori->nama_kategori }}</li>
                     </ol>
-                    <span><i class="fa-regular fa-clock text-warning"></i> {{ $artikel->created_at }} | Dibaca {{ $artikel->views }} Kali</span>
+                    <span><i class="fa-regular fa-clock text-warning mt-4"></i> {{ $artikel->created_at->isoFormat('dddd, D MMMM Y'); }} | Dibaca {{ $artikel->views }} Kali</span>
                     <h2><b>{{ $artikel->judul }}</b></h2>
                     <div class="row">
                         <div class="col-lg-10">
@@ -33,8 +33,10 @@
                     <div class="thumbnail">
                         <img src="{{ asset('uploads/' . $artikel->gambar_artikel) }}" alt="" class="img-fluid w-100">
                     </div>
-                    <div class="detail-body">
-                        {!! $artikel->body !!}
+                    <div class="detail-body mt-3">
+                        <div style="text-align: justify;">
+                            {!! $artikel->body !!}
+                        </div>  
                     </div>
                     
                 </div>

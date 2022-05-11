@@ -25,7 +25,10 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [FrontendController::class, 'index']);
+
+// statis page
 Route::get('/detail-artikel/{slug}', [FrontendController::class, 'detail'])->name('detail-artikel');
+Route::get('/detail-sambutan/{slug}', [SambutanController::class, 'detailSambutan'])->name('detail-sambutan');
 
 Auth::routes();
 

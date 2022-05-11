@@ -9,10 +9,12 @@ use App\Models\Sambutan;
 use App\Models\Slide;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
     public function index(){
+
         $kategori = Kategori::all();
         $artikel = Artikel::all();
         $slide = Slide::all();
@@ -31,15 +33,17 @@ class FrontendController extends Controller
     }
 
     public function detail($slug){
+
         $kategori = Kategori::all();
         $slide = Slide::all();
         $artikel = Artikel::where('slug', $slug)->first();
+        $artikel->increment('views');
         $bannerS = Banner::where('id', '1')->first();
         $users = User::all();
         $sambutan = Sambutan::all();
 
         $postinganTerbaru = Artikel::orderBy('created_at', 'DESC')->limit(5)->get();
-
+        
         return view('front.artikel.detail-artikel', [
             'kategori' => $kategori,
             'artikel' => $artikel,
@@ -48,8 +52,10 @@ class FrontendController extends Controller
             'postinganTerbaru' => $postinganTerbaru,
             'title' => 'Website Template Laravel Kabupaten Bengkalis',
             'users' => $users,
-            'sambutan' => $sambutan
+            'sambutan' => $sambutan,
         ]);
+
     }
+
 
 }

@@ -21,13 +21,15 @@ class DashboardController extends Controller
         $artikel = Artikel::all();
         $kategori = Kategori::all();
         $sambutan = Sambutan::all();
+        $artikelPopuler = Artikel::orderBy('views', 'DESC')->limit(5)->get();
 
         return view ('back.dashboard', [
             'title' => 'Website Template Laravel Kabupaten Bengkalis',
             'users' => $users,
             'artikel' => $artikel,
             'kategori' => $kategori,
-            'sambutan' => $sambutan
+            'sambutan' => $sambutan,
+            'artikelPopuler' => $artikelPopuler
         ]);
 
     }
