@@ -31,7 +31,7 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th scope="col">ID</th>
+                                    <th scope="col">No</th>
                                     <th scope="col">Nama Kategori</th>
                                     <th scope="col">Slug</th>
                                     <th scope="col">Action</th>
@@ -40,7 +40,7 @@
                             <tbody>
                                 @forelse ($kategori as $row)
                                     <tr>
-                                        <th scope="row">{{ $row->id }}</th>
+                                        <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{ $row->nama_kategori }}</td>
                                         <td>{{ $row->slug }}</td>
                                         <td>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Artikel;
 use App\Models\Banner;
 use App\Models\Kategori;
+use App\Models\Materi;
+use App\Models\Playlist;
 use App\Models\Sambutan;
 use App\Models\Slide;
 use App\Models\User;
@@ -20,6 +22,10 @@ class FrontendController extends Controller
         $slide = Slide::all();
         $bannerS = Banner::where('id', '1')->first();
         $sambutan = Sambutan::all();
+        $materi = Materi::all()->where('playlist_id', '1')->sortDesc();
+        $galeriKegiatan = Materi::all()->where('playlist_id', '2')->sortDesc();
+        $playlistPertama = Playlist::all()->where('judul_playlist');
+
 
         return view('front.home',[
             'kategori' => $kategori,
@@ -28,7 +34,10 @@ class FrontendController extends Controller
             'bannerS' => $bannerS,
             'title' => 'Website Template Laravel Kabupaten Bengkalis',
             'post' => Artikel::latest()->paginate(5)->withQueryString(),
-            'sambutan' => $sambutan
+            'sambutan' => $sambutan,
+            'materi' => $materi,
+            'galeriKegiatan' => $galeriKegiatan,
+            'playlistPertama' => $playlistPertama
         ]);
     }
 

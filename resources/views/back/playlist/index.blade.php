@@ -32,21 +32,21 @@
                 <table class="table datatable">
                   <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Playlist Video</th>
-                        <th scope="col">Slug</th>
+                        <th scope="col">No</th>
+                        <th scope="col">Playlist</th>
+                        <th scope="col">Deskripsi</th>
                         <th scope="col">Author</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Gambar</th>
+                        {{-- <th scope="col">Gambar</th> --}}
                         <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     @forelse ($playlist as $row)
                         <tr>
-                            <th scope="row">{{ $row->id }}</th>
+                            <th scope="row">{{$loop->iteration}}</th>
                             <td>{{ $row->judul_playlist }}</td>
-                            <td>{{ $row->slug }}</td>
+                            <td>{!! $row->deskripsi !!}</td>
                             <td>{{ $row->users->name }}</td>
                             <td>
                                 @if ($row->is_active == '1')
@@ -55,7 +55,7 @@
                                     Draft
                                 @endif
                             </td>
-                            <td><img src="{{ asset('uploads/' . $row->gambar_playlist) }}" width="80" class="img-thumbnail"></td>
+                            {{-- <td><img src="{{ asset('uploads/' . $row->gambar_playlist) }}" width="80" class="img-thumbnail"></td> --}}
                             <td>
                                 <a href="{{ route('playlist.edit', $row->id) }}" class="btn btn-warning btn-sm text-white"><i class="bi bi-pencil-square d-inline"></i></a>
                                 <form action="{{ route('playlist.destroy', $row->id) }}" method="post" class="d-inline">

@@ -32,9 +32,9 @@
                 <table class="table datatable">
                   <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Materi Video</th>
-                        <th scope="col">Slug</th>
+                        <th scope="col">No</th>
+                        <th scope="col">Materi</th>
+                        <th scope="col">Url</th>
                         <th scope="col">Playlist</th>
                         <th scope="col">Status</th>
                         <th scope="col">Gambar</th>
@@ -44,9 +44,9 @@
                   <tbody>
                     @forelse ($materi as $row)
                         <tr>
-                            <th scope="row">{{ $row->id }}</th>
+                            <th scope="row">{{$loop->iteration}}</th>
                             <td>{{ $row->judul_materi  }}</td>
-                            <td>{{ $row->slug }}</td>
+                            <td><a href="https://www.youtube.com/watch?v={{ $row->link }}">https://www.youtube.com/watch?v={{ $row->link }}</a></td>
                             <td>{{ $row->playlist->judul_playlist }}</td>
                             <td>
                                 @if ($row->is_active == '1')

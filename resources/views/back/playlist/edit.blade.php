@@ -25,7 +25,7 @@
                         @csrf
                         @method('PUT')
                         <div class="col-12">
-                            <label for="judul" class="form-label">Playlist Video</label>
+                            <label for="judul" class="form-label">Playlist</label>
                             <input type="text" value="{{ $playlist->judul_playlist }}" class="form-control" id="text" placeholder="masukkan judul playlist video" name="judul_playlist">
                         </div>
                         <div class="col-12">
@@ -39,12 +39,12 @@
                                 <option value="0" {{ $playlist->is_active == '0' ? 'selected' : '' }}>Draft</option>
                             </select>
                         </div>
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <label for="gambar" class="form-label">Gambar Playlist</label>
                             <input type="file" class="form-control" name="gambar_playlist">
-                            <label for="gambar" class="mt-2">Gambar saat ini</label><br>
+                            <label for="gambar" class="mt-2">Gambar saat ini</label><br>    
                             <img src="{{ asset('uploads/' . $playlist->gambar_playlist) }}" alt="" class="card-img img-thumbnail w-25">
-                        </div>
+                        </div> --}}
                         <div class="text-left">
                             <button type="submit" class="btn btn-primary">Submit</button>
                             <button type="reset" class="btn btn-danger">Reset</button>

@@ -46,7 +46,7 @@ class PlaylistController extends Controller
         $data = request()->all();
            $data['slug']  = Str::slug($request->judul_playlist);
            $data['user_id'] = Auth::id();
-           $data['gambar_playlist']  = $request->file('gambar_playlist')->store('playlist');
+        //    $data['gambar_playlist']  = $request->file('gambar_playlist')->store('playlist');
         Playlist::create($data);
 
         return redirect()->route('playlist.index')->with(['success' => 'Data Berhasil Disimpan']);
@@ -85,32 +85,46 @@ class PlaylistController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if(empty($request->file('gambar_playlist'))){
-            $playlist = Playlist::find($id);
-            $playlist->update([
-                'judul_playlist' => $request->judul_playlist,
-                'deskripsi' => $request->deskripsi,
-                'slug'  => Str::slug($request->judul_playlist),
-                'is_active' => $request->is_active,
-                'user_id' => Auth::id(),
-            ]);
-            return redirect()->route('playlist.index')->with(['success' => 'Data Berhasil Update']);
+        // old with image
+        // if(!empty($request->file('gambar_playlist'))){
+        //     $playlist = Playlist::find($id);
+        //     $playlist->update([
+        //         'judul_playlist' => $request->judul_playlist,
+        //         'deskripsi' => $request->deskripsi,
+        //         'slug'  => Str::slug($request->judul_playlist),
+        //         'is_active' => $request->is_active,
+        //         'user_id' => Auth::id(),
+        //     ]);
+        //     return redirect()->route('playlist.index')->with(['success' => 'Data Berhasil Update']);
             
-        }else{
-            $playlist = Playlist::find($id);
-            Storage::delete($playlist->gambar_playlist);
+        // }else{
+        //     $playlist = Playlist::find($id);
+        //     Storage::delete($playlist->gambar_playlist);
+        //     $playlist->update([
+        //         'judul_playlist' => $request->judul_playlist,
+        //         'deskripsi' => $request->deskripsi,
+        //         'slug'  => Str::slug($request->judul_playlist),
+        //         'is_active' => $request->is_active,
+        //         'user_id' => Auth::id(),
+        //         'gambar_playlist' => $request->file('gambar_playlist')->store('playlist'),
+
+        //     ]);
+
+        //     return redirect()->route('playlist.index')->with(['success' => 'Data Berhasil Update']);
+        // }
+
+        // new without image
+        $playlist = Playlist::find($id);
             $playlist->update([
                 'judul_playlist' => $request->judul_playlist,
                 'deskripsi' => $request->deskripsi,
                 'slug'  => Str::slug($request->judul_playlist),
                 'is_active' => $request->is_active,
                 'user_id' => Auth::id(),
-                'gambar_playlist' => $request->file('gambar_playlist')->store('playlist'),
 
             ]);
 
             return redirect()->route('playlist.index')->with(['success' => 'Data Berhasil Update']);
-        }
     }
 
     /**
@@ -122,7 +136,7 @@ class PlaylistController extends Controller
     public function destroy($id)
     {
         $playlist = Playlist::find($id);
-        Storage::delete($playlist->gambar_playlist);
+        // Storage::delete($playlist->gambar_playlist);
         $playlist->delete();
         
         return redirect()->route('playlist.index')->with(['success' => 'Data Berhasil Dihapus']);

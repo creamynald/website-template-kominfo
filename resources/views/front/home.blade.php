@@ -3,8 +3,8 @@
 @section('content')
 
   @include('front.includes.slide')
-<!-- ======= sambutan kadis Section ======= -->
-<section id="team" class="team">
+<!-- ======= sambutan kadis dan berita Section ======= -->
+<section id="main" class="team">
   <div class="container">
     <div class="row">
 
@@ -91,8 +91,83 @@
         </div>
       </div>         
 
-    {{-- end row --}}
+    {{-- end right --}}
     </div>
 
-</section><!-- End Team Section -->
+</section><!-- End Sambutna Kadis & Berita Section -->
+
+<!-- ======= Covid Section ======= -->
+<section id="covid" class="team">
+  <div class="container">
+
+    <div class="section-title">
+      <span>{{ $playlistPertama[0]->judul_playlist }}</span>
+          <h2>{{ $playlistPertama[0]->judul_playlist }}</h2>
+        <p>{!! $playlistPertama[0]->deskripsi !!}</p> 
+    </div>
+
+
+    <div class="row">
+
+      @foreach ($materi as $row)
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><a href="{{ route('detail-video', $row->slug) }}">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $row->link }}" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="member-info">
+            <span><i class="fa-regular fa-clock text-danger"></i> {{ $row->created_at->isoFormat('dddd, D MMMM Y' ); }}</span>
+            <h4><a href="{{ route('detail-video', $row->slug) }}">{{ $row->judul_materi }}</a></h4>
+            <div class="social">
+              <a href=""><i class="ri-twitter-fill"></i></a>
+              <a href=""><i class="ri-facebook-fill"></i></a>
+              <a href=""><i class="ri-instagram-fill"></i></a>
+              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      @endforeach
+
+    </div>
+
+    <div align="center">
+      <a href="#"><button class="btn btn-danger btn-sm mt-3" type="button"><i class="fa-solid fa-share"></i> Selengkapnya</button></a>
+    </div>
+
+  </div>
+</section><!-- End Covid Section -->
+
+<!-- ======= Galeri Section ======= -->
+<section id="covid" class="team">
+  <div class="container">
+
+    <div class="section-title">
+      <span>{{ $playlistPertama[1]->judul_playlist }}</span>
+          <h2>{{ $playlistPertama[1]->judul_playlist }}</h2>
+        <p>{!! $playlistPertama[1]->deskripsi !!}</p> 
+    </div>
+
+    <div class="row portfolio-container">
+
+        @foreach ($galeriKegiatan as $row)
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="{{ asset('uploads/' . $row->gambar_materi) }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <span><i class="fa-regular fa-clock text-danger"></i> {{ $row->created_at->isoFormat('dddd, D MMMM Y' ); }}</span>
+              <h4><a href="{{ route('detail-foto', $row->slug) }}">{{ $row->judul_materi }}</a></h4>
+            </div>
+          </div>
+        </div>
+        @endforeach
+
+    </div>
+
+    <div align="center">
+      <a href="#"><button class="btn btn-danger btn-sm mt-3" type="button"><i class="fa-solid fa-share"></i> Selengkapnya</button></a>
+    </div>
+
+  </div>
+</section><!-- End Galeri Section -->
 @endsection

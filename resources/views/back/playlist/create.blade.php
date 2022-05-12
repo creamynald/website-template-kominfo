@@ -29,12 +29,12 @@
                         </div>
                         <div class="col-12">
                             <label for="deskripsi" class="form-label">Deskripsi</label>
-                            <textarea class="form-control" name="deskripsi" id="editor1"></textarea>
+                            <textarea class="form-control" name="deskripsi" id="editor1" required></textarea>
                         </div>
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <label for="gambar" class="form-label">Gambar Playlist</label>
-                            <input type="file" class="form-control" name="gambar_playlist">
-                        </div>
+                            <input type="file" class="form-control" name="gambar_playlist" required>
+                        </div> --}}
                         <div class="col-12">
                             <label for="status" class="form-label">Status</label>
                             <select type="text" class="form-control" id="text" name="is_active">

@@ -824,25 +824,19 @@ section {
 }
 .team .member .pic {
   overflow: hidden;
-  width: 180px;
-  border-radius: 50%;
+  width: 500px;
 }
 .team .member .pic img {
   transition: ease-in-out 0.3s;
 }
 .team .member .minipic {
   overflow: hidden;
-  width: 60px;
+  width: 50px;
   border-radius: 50%;
 }
-.team .member .minipic img {
-  transition: ease-in-out 0.3s;
-}
-.team .member:hover img {
-  transform: scale(1.1);
-}
+
 .team .member .member-info {
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 .team .member .member-infos {

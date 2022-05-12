@@ -28,8 +28,9 @@
                             <input type="text" class="form-control" placeholder="masukkan judul materi video" name="judul_materi">
                         </div>
                         <div class="col-12">
-                            <label for="link" class="form-label">Link Video</label>
-                            <input type="text" class="form-control" placeholder="masukkan judul link video, contoh: https://www.youtube.com/embed/pYdyPFfXGCY" name="link">
+                            <label for="link" class="form-label">ID Video</label><br>
+                            <small>masukkan id video youtube, contoh: <i><b>https://www.youtube.com/watch?v=wX2HUsCbYi4</b></i>, cukup input <b>wX2HUsCbYi4</b> saja <br>*Jika tidak ada, masukkan <b>- / (strip)</b></small>
+                            <input type="text" class="form-control" placeholder="wX2HUsCbYi4" name="link" required>
                         </div>
                         <div class="col-12">
                             <label for="deskripsi" class="form-label">Deskripsi</label>

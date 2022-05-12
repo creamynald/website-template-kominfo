@@ -29,7 +29,8 @@
                             <input type="text" class="form-control" id="text" name="judul_materi" value="{{ $materi->judul_materi }}">
                         </div>
                         <div class="col-12">
-                            <label for="link" class="form-label">Judul Materi</label>
+                            <label for="link" class="form-label">ID Video</label>
+                            <small>masukkan id video youtube, contoh: <i><b>https://www.youtube.com/watch?v=wX2HUsCbYi4</b></i>, cukup input <b>wX2HUsCbYi4</b> saja</small>
                             <input type="text" class="form-control" id="text" name="link" value="{{ $materi->link }}">
                         </div>
                         <div class="col-12">

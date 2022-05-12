@@ -32,7 +32,7 @@
                 <table class="table datatable">
                   <thead>
                     <tr>
-                        <th scope="col">ID</th>
+                        <th scope="col">No</th>
                         <th scope="col">Judul Post</th>
                         <th scope="col">Kategori</th>
                         <th scope="col">Author</th>
@@ -43,7 +43,7 @@
                   <tbody>
                     @forelse ($artikel as $row)
                         <tr>
-                            <th scope="row">{{ $row->id }}</th>
+                            <th scope="row">{{$loop->iteration}}</th>
                             <td>{{ $row->judul }}</td>
                             <td>{{ $row->kategori->nama_kategori }}</td>
                             <td>{{ $row->users->name }}</td>

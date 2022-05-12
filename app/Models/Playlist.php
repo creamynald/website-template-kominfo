@@ -16,7 +16,7 @@ class Playlist extends Model
         'slug',
         'deskripsi',
         'user_id',
-        'gambar_playlist',
+        // 'gambar_playlist',
         'is_active'
     ];
 

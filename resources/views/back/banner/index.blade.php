@@ -32,7 +32,7 @@
                 <table class="table datatable">
                   <thead>
                     <tr>
-                        <th scope="col">ID</th>
+                        <th scope="col">No</th>
                         <th scope="col">Judul Banner</th>
                         <th scope="col">Link</th>
                         <th scope="col">Status</th>
@@ -43,7 +43,7 @@
                   <tbody>
                     @forelse ($banner as $row)
                         <tr>
-                            <th scope="row">{{ $row->id }}</th>
+                            <th scope="row">{{$loop->iteration}}</th>
                             <td>{{ $row->judul }}</td>
                             <td>{{ $row->link }}</td>
                             <td>

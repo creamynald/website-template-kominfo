@@ -19,7 +19,7 @@ class MateriController extends Controller
      */
     public function index()
     {
-        $materi = Materi::all();
+        $materi = Materi::all()->sortDesc();
         return view('back.materi.index', compact('materi'));
     }
 

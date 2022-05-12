@@ -29,6 +29,8 @@ Route::get('/', [FrontendController::class, 'index']);
 // statis page
 Route::get('/detail-artikel/{slug}', [FrontendController::class, 'detail'])->name('detail-artikel');
 Route::get('/detail-sambutan/{slug}', [SambutanController::class, 'detailSambutan'])->name('detail-sambutan');
+Route::get('/detail-video/{slug}', [FrontendController::class, 'detailVideo'])->name('detail-video');
+Route::get('/detail-foto/{slug}', [FrontendController::class, 'detailFoto'])->name('detail-foto');
 
 Auth::routes();
 
